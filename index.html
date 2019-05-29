@@ -34,15 +34,15 @@
 	
 	<script>
 	var audio = new Audio("multimedia/space.mp3");
-	var mBTN = document.getElementById("music");
+	var controls = document.getElementById("music");
 	audio.play()
 	function toggleMusic(){
 		if (audio.paused){
 			audio.play();
-			mBTN.innerHTML = "stop";
+			controls.innerHTML = "stop";
 		} else {
 			audio.pause();
-			mBTN.innerHTML = "play";
+			controls.innerHTML = "play";
 		};
 	}
 	</script>
@@ -75,7 +75,7 @@
 
 		<footer>
 			<p class="inline" style="color: #707070;">Copyright 2019 | Niccol&ograve Agnoletti - All rights reserved.</p>
-			<p class="btn round-edges bold inline" id="music" onclick="toggleMusic()">stop music</p>
+			<p class="btn round-edges bold inline" id="music" onclick="toggleMusic()">music</p>
 		</footer>
 	</body>
 	</html>
