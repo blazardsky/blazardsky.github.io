@@ -33,3 +33,9 @@
 	mix-blend-mode: overlay;
 	color: #ffffff;
 }
+
+@media only screen and (max-width: 1080px) {
+	#blazardsky > h1 {
+		font-size: 4.725em;
+	}
+}

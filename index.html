@@ -34,9 +34,9 @@
 	
 	<script>
 	var audio = new Audio("multimedia/space.mp3");
-	var controls = document.getElementById("music");
 	audio.play()
 	function toggleMusic(){
+		var controls = document.getElementById("music");
 		if (audio.paused){
 			audio.play();
 			controls.innerHTML = "stop";
