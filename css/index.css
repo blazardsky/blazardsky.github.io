@@ -8,3 +8,22 @@
 	mix-blend-mode: lighten;
 	z-index: 9;
 }
+
+#bg-music {
+	background-color: #663399;
+	float: right;
+	margin: auto;
+	padding: 0px 15px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1em;
+	mix-blend-mode: lighten;
+}
+
+#blazardsky {
+	mix-blend-mode: lighten;
+	position: absolute;
+	margin: auto;
+	text-align: center;
+	color: #ffffff;
+}

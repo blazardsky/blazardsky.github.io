@@ -103,6 +103,7 @@ p {
 .round-edges { 	border-radius: 15px; }
 .circle { border-radius: 100%; }
 .inline { display: inline-block; }
+.inline-desktop { display: inline-block; }
 .btn { cursor: pointer; }
 
 #contacts-nav {
@@ -121,23 +122,31 @@ footer {
 	bottom: 0;
 }
 
-#stop-music {
-	background-color: #663399;
-	float: right;
-	margin: auto;
-	padding: 0px 15px;
-	text-align: center;
-	vertical-align: middle;
-	font-size: 1em;
-	mix-blend-mode: lighten;
-}
+
 
 /*--
 #open-menu { display: hidden;}
 #close-menu {display: hidden;}
-#audio {display: hidden;}
+
 @media only screen and (max-width: 1080px) {
+	body {
+		font-size: 86%;
+	}
 	#open-menu { display: block;}
 	#close-menu {display: block;}
-	header {display: hidden;}
+	.inline-desktop { display: block; }
+	header {
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		margin: auto 0;
+		padding: 10px;
+		z-index: 99;
+		background: #010101;
+		
+	}
+	footer {
+		padding: 5px;
+	}
 }*/
