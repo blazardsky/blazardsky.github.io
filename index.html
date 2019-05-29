@@ -36,13 +36,12 @@
 	var audio = new Audio("multimedia/space.mp3");
 	audio.play()
 	function toggleMusic(){
-		var controls = document.getElementById("music");
 		if (audio.paused){
 			audio.play();
-			controls.innerHTML = "stop";
+			document.getElementById("music").innerHTML = "stop";
 		} else {
 			audio.pause();
-			controls.innerHTML = "play";
+			document.getElementById("music").innerHTML = "play";
 		};
 	}
 	</script>
@@ -75,7 +74,7 @@
 
 		<footer>
 			<p class="inline" style="color: #707070;">Copyright 2019 | Niccol&ograve Agnoletti - All rights reserved.</p>
-			<p class="btn round-edges bold inline" id="music" onclick="toggleMusic()">music</p>
+			<p id="music" class="btn round-edges bold inline" onclick="toggleMusic()">music</p>
 		</footer>
 	</body>
 	</html>
