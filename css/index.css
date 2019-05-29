@@ -21,13 +21,15 @@
 }
 
 #blazardsky {
-	mix-blend-mode: lighten;
 	position: absolute;
 	margin: auto;
 	text-align: center;
-	color: #ffffff;
 	height: 100%;
 	width: 100%;
+	z-index: -1;
 }
 #blazardsky > h1 {
 	font-size: 8.725em;
+	mix-blend-mode: lighten;
+	color: #ffffff;
+}
