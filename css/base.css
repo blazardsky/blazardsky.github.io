@@ -104,7 +104,6 @@ footer {
 #contacts-nav { float: right; }
 
 @media only screen and (max-width: 1080px) {
-	body { font-size: 83%; }
 	.inline-desktop { display: block; }
 	.hidden-mobile { display: none; }
 	
