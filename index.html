@@ -44,6 +44,16 @@
 					document.getElementById("music").innerHTML = "play";
 				};
 			}
+			
+			function toggleMenu(){
+				var MENU = document.getElementById("toggle-menu");
+				var OPEN = "multimedia/png/open.png";
+				var CLOSE = "multimedia/png/close.png";
+				
+				if(MENU.src = OPEN){ MENU.src = CLOSE; } else { MENU.src = OPEN; };
+				
+				document.getElementById("nav-menu").classList.toggle("flex-spcbtwn", "hidden-mobile", "flex-column", "flex-center");
+			}
 		</script>
 	
     </head>
@@ -80,17 +90,6 @@
 			<p class="inline" style="color: #707070;">Copyright 2019 | Niccol&ograve Agnoletti - All rights reserved.</p>
 			<p id="music" class="btn round-edges bold inline" onclick="toggleMusic()">music</p>
 		</footer>
-		
-		<script>	
-			function toggleMenu(){
-				var MENU = document.getElementById("toggle-menu");
-				var OPEN = "multimedia/png/open.png";
-				var CLOSE = "multimedia/png/close.png";
-				
-				if(MENU.src = OPEN){ MENU.src = CLOSE; } else { MENU.src = OPEN; };
-				
-				document.getElementById("nav-menu").classList.toggle("flex-spcbtwn", "hidden-mobile", "flex-column", "flex-center");
-			}
-		</script>
+
 	</body>
 </html>
