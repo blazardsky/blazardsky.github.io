@@ -15,7 +15,8 @@
 
 #content a { color: #000000; } 
 #profilepic {
-	margin: 4em; 
+	margin-bottom: 4em;
+	margin-top: 2em;
 	max-width: 100%;
 	height: auto;
 }
