@@ -58,15 +58,13 @@
 				var OPEN = "multimedia/png/open.png";
 				var CLOSE = "multimedia/png/close.png";
 				
-				switch(MENU.src = OPEN){ 
-				case true:
+				if(MENU.src = OPEN){ 
 					MENU.src = CLOSE;
 					break;
-				case false:
+				} //con else non so perché ma non funziona dhn
+				if (MENU.src = CLOSE){
 					MENU.src = OPEN;
 					break;
-				default:
-					MENU.src = OPEN;
 				};
 			}
 		</script>
