@@ -58,7 +58,7 @@
 		<header>
 			<img src="multimedia/png/open.png" id="toggle-menu" class="btn" onclick="toggleMenu()"/>
 			
-			<nav id="nav-menu" class="flex flex-spcbtwn hidden-mobile">
+			<nav id="nav-menu" class="flex flex-spcbtwn flex-column hidden-mobile">
 				<h4 id="main-nav" class="inline-desktop"> 
 					<a href="about.html">about</a> 
 					<a href="works.html">works</a> 
@@ -83,15 +83,13 @@
 		
 		<script>
 			var MENU = document.getElementById("toggle-menu");
+			var NAV = document.getElementById('nav-menu');
 			var OPEN = "multimedia/png/open.png";
 			var CLOSE = "multimedia/png/close.png";
+			
 			function toggleMenu(){
-				if(MENU.src === OPEN){
-					MENU.src = CLOSE;
-				} else {
-					MENU.src = OPEN;
-				};
-				document.getElementById('nav-menu').classList.toggle('hidden-mobile');
+				if(MENU.src == OPEN){ MENU.src = CLOSE; } else { MENU.src = OPEN; };
+				NAV.classList.toggle('hidden-mobile');
 			}
 		</script>
 	</body>

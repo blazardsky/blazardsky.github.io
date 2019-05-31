@@ -121,6 +121,18 @@ footer {
 		background: #010101;
 	}
 	
+	#nav-menu > h4 {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		align-content: center;
+		
+	}
+	#nav-menu > h4	> a {
+		display: block;
+		margin: auto;
+	}
+	
 	#toggle-menu {
 		display: block;
 		z-index: 3;
