@@ -106,7 +106,7 @@ footer {
 	.inline-desktop { display: block; }
 	.hidden-mobile { display: none; }
 	
-	#nav-menu {
+	#menu {
 		width: 100%;
 		height: 100%;
 		position: absolute;
@@ -117,7 +117,7 @@ footer {
 		background: #010101;
 	}
 	
-	#nav-menu > h4 {
+	#menu > h4 {
 		display: flex;
 	}
 	
