@@ -21,7 +21,7 @@
 }
 
 #blazardsky:hover {	color: #663399; }
-#blazardsky > h1 { font-size: 8.725em; }
+#blazardsky > h1 { font-size: 6.725vw; }
 
 
 #bgvideo {
@@ -37,8 +37,6 @@
 
 
 @media only screen and (max-width: 1080px) {
-	#blazardsky > h1 {
-		font-size: 5.65em;
-	}
+
 	#bgvideo { display: none; }
 }
