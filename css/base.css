@@ -87,10 +87,6 @@ p  { font-size: 1.3em; }
 .inline-desktop { display: inline-block; }
 .btn { cursor: pointer; }
 
-#contacts-nav {
-	float: right;
-}
-
 header {
 	width: 100%;
 	padding: 10px 25px;
@@ -105,6 +101,7 @@ footer {
 }
 
 #toggle-menu { display: none;}
+#contacts-nav { float: right; }
 
 @media only screen and (max-width: 1080px) {
 	body { font-size: 83%; }
@@ -133,6 +130,8 @@ footer {
 		margin: auto;
 		float: left;
 	}
+	
+	#contacts-nav { float: none; }
 	
 	footer { padding: 5px; }
 }*/

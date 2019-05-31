@@ -20,13 +20,8 @@
 	mix-blend-mode: lighten;
 }
 
-#blazardsky:hover {
-	color: #663399;
-}
-
-#blazardsky > h1 {
-	font-size: 8.725em;
-}
+#blazardsky:hover {	color: #663399; }
+#blazardsky > h1 { font-size: 8.725em; }
 
 
 #bgvideo {
@@ -36,7 +31,7 @@
 	bottom: 0;
 	min-width: 100%;
 	min-height: 100%;
-    -webkit-filter: grayscale(100%) contrast(90%);
+    -webkit-filter: grayscale(100%) contrast(120%);
     filter: grayscale(100%) contrast(90%);
 }
 
