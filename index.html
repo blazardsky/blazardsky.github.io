@@ -58,7 +58,16 @@
 				var OPEN = "multimedia/png/open.png";
 				var CLOSE = "multimedia/png/close.png";
 				
-				if(MENU.src = OPEN){ MENU.src = CLOSE; } else { MENU.src = OPEN; };
+				switch(MENU.src = OPEN){ 
+				case true:
+					MENU.src = CLOSE;
+					break;
+				case false:
+					MENU.src = OPEN;
+					break;
+				default:
+					MENU.src = OPEN;
+				};
 			}
 		</script>
 	
