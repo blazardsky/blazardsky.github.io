@@ -33,32 +33,34 @@
 	<link rel="stylesheet" href="css/random-bg-images.css">
 	
 	<script>
-	var audio = new Audio("multimedia/space.mp3");
-	audio.play()
-	function toggleMusic(){
-		if (audio.paused){
-			audio.play();
-			document.getElementById("music").innerHTML = "stop";
+	function toggleMenu(){
+		var MENU = document.getElementById("toggle-menu");
+		var OPEN = "multimedia/png/menu.png";
+		var CLOSE = "multimedia/png/close.png";
+		if(MENU.src = OPEN){
+			MENU.src = CLOSE;
+			document.getElementsByTagName('nav').classList.remove('hidden-mobile');
 		} else {
-			audio.pause();
-			document.getElementById("music").innerHTML = "play";
+			MENU.src = OPEN;
+			document.getElementsByTagName('nav').classList.add('hidden-mobile');
 		};
 	}
+		
 	</script>
 	
     </head>
 	
 	
     <body class="flex flex-column flex-spcbtwn">
-		<!--img src="png/menu.png" id="open-menu"/>
-		<img src="png/close.png" id="close-menu"/-->
 		
 		<video autoplay muted loop id="bgvideo">
 			<source src="multimedia/NASA_Apollo11.mp4" type="video/mp4">
 		</video>
 		
 		<header>
-			<nav class="flex flex-spcbtwn">
+			<img src="multimedia/png/menu.png" id="toggle-menu" onclick="toggleMenu()"/>
+			
+			<nav class="flex flex-spcbtwn hidden-mobile">
 				<h4 id="main-nav" class="inline-desktop"> 
 					<a href="about.html">about</a> 
 					<a href="works.html">works</a> 
@@ -80,5 +82,19 @@
 			<p class="inline" style="color: #707070;">Copyright 2019 | Niccol&ograve Agnoletti - All rights reserved.</p>
 			<p id="music" class="btn round-edges bold inline" onclick="toggleMusic()">music</p>
 		</footer>
+		
+		<script>
+			var audio = new Audio("multimedia/space.mp3");
+			audio.play()
+			function toggleMusic(){
+				if (audio.paused){
+					audio.play();
+					document.getElementById("music").innerHTML = "stop";
+				} else {
+					audio.pause();
+					document.getElementById("music").innerHTML = "play";
+				};
+			}
+		</script>
 	</body>
-	</html>
+</html>
