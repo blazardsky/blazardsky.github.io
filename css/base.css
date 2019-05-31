@@ -123,14 +123,13 @@ footer {
 	
 	#nav-menu > h4 {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		flex-direction: column;
 		align-content: center;
-		
 	}
 	#nav-menu > h4	> a {
 		display: block;
-		margin: auto;
+		margin: 1em auto;
 	}
 	
 	#toggle-menu {
