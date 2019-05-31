@@ -5,7 +5,7 @@
 }
 #content { 
 	background: #f1f1f1;
-	color: #e800e8;
+	color: #4d004d;
 	text-align: center;
 	margin: auto;
 	padding: 3.625em;
@@ -15,13 +15,13 @@
 
 #content a { color: #000000; } 
 #profilepic {
-	margin: 4em 0 0 4emS; 
+	margin: 4em; 
 	max-width: 100%;
 	height: auto;
 }
 #profilepic:hover {
 	animation-name: sfocatura;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	animation-timing-function: ease-out;
 }
 
