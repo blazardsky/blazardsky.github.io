@@ -1,7 +1,16 @@
-#content {
-	width: 85%;
-	height: 85%;
+#container {
+	width: 100%;
+	height: 100%;
 	background: #f1f1f1;
 	color: #4d004d;
 	text-align: center;
+	padding: 2em;
+}
+#content { margin: auto; }
+#content a { color: #000000; } 
+
+#profilepic { margin-bottom: 4em; }
+#profilepic:hover {
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
 }
