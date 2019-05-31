@@ -119,6 +119,8 @@ footer {
 	
 	#menu > h4 {
 		display: flex;
+		justify-content: center;
+		flex-direction: column;
 	}
 	
 	#toggle-menu {
