@@ -49,7 +49,7 @@
     </head>
 	
 	
-    <body class="flex flex-column flex-spcbtwn">
+    <body class="flex">
 		
 		<video autoplay muted loop id="bgvideo">
 			<source src="multimedia/NASA_Apollo11.mp4" type="video/mp4">
@@ -84,13 +84,12 @@
 		<script>	
 			function toggleMenu(){
 				var MENU = document.getElementById("toggle-menu");
-				var NAV = document.getElementById("nav-menu");
 				var OPEN = "multimedia/png/open.png";
 				var CLOSE = "multimedia/png/close.png";
 				
-				//if(MENU.src = OPEN){ MENU.src = CLOSE; } else { MENU.src = OPEN; };
+				if(MENU.src = OPEN){ MENU.src = CLOSE; } else { MENU.src = OPEN; };
 				
-				NAV.classList.toggle("flex-spcbtwn", "hidden-mobile", "flex-column", "flex-center");
+				document.getElementById("nav-menu").classList.toggle("flex-spcbtwn", "hidden-mobile", "flex-column", "flex-center");
 			}
 		</script>
 	</body>
