@@ -83,17 +83,15 @@
 		
 		<script>
 			var MENU = document.getElementById("toggle-menu");
-			var NAV = document.getElementById('nav-menu');
 			var OPEN = "multimedia/png/open.png";
 			var CLOSE = "multimedia/png/close.png";
 			function toggleMenu(){
-				if(MENU.src === OPEN){
+				if(MENU.src == OPEN){
 					MENU.src = CLOSE;
-					NAV.classList.remove('hidden-mobile');
 				} else {
 					MENU.src = OPEN;
-					NAV.classList.add('hidden-mobile');
 				};
+				document.getElementById('nav-menu').classList.toggle('hidden-mobile');
 			}
 		</script>
 	</body>

@@ -114,18 +114,19 @@ footer {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		margin: 0;
+		left: 0;
+		top: 0;
 		padding: 10px;
 		z-index: 2;
 		background: #010101;
 	}
 	
 	#toggle-menu {
-		position: relative;
 		display: block;
+		z-index: 3;
+		position: relative;
 		margin: auto;
 		float: left;
-		z-index: 3;
 	}
 	
 	footer { padding: 5px; }
