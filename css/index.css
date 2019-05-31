@@ -16,18 +16,23 @@
 	height: 100%;
 	width: 100%;
 	z-index: -1;
-}
-#blazardsky > h1 {
-	font-size: 8.725em;
-	mix-blend-mode: overlay;
 	color: #ffffff;
+	mix-blend-mode: overlay;
 }
-#blazardsky > h1:hover {
+
+#blazardsky:hover {
 	color: #663399;
 	mix-blend-mode: multiply;
 }
 
+#blazardsky > h1 {
+	font-size: 8.725em;
+}
 
+#blazardsky:hover #bgvideo {
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+}
 
 #bgvideo {
 	z-index: -2;
@@ -39,10 +44,7 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
-#bgvideo:active {
-	-webkit-filter: blur(5px);
-	filter: blur(5px);
-}
+
 
 @media only screen and (max-width: 1080px) {
 	#blazardsky > h1 {
