@@ -124,7 +124,6 @@ footer {
 	#nav-menu > h4 {
 		display: flex;
 		justify-content: center;
-		flex-direction: column;
 		align-content: center;
 	}
 	#nav-menu > h4	> a {
