@@ -110,6 +110,7 @@ footer {
 	body { font-size: 83%; }
 	.inline-desktop { display: block; }
 	.hidden-mobile { display: none; }
+	
 	#nav-menu {
 		width: 100%;
 		height: 100%;
@@ -123,12 +124,6 @@ footer {
 	
 	#nav-menu > h4 {
 		display: flex;
-		justify-content: center;
-		align-content: center;
-	}
-	#nav-menu > h4	> a {
-		display: block;
-		margin: 1em auto;
 	}
 	
 	#toggle-menu {
