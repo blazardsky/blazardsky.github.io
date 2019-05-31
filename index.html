@@ -58,7 +58,7 @@
 		<header>
 			<img src="multimedia/png/open.png" id="toggle-menu" class="btn" onclick="toggleMenu()"/>
 			
-			<nav id="nav-menu" class="flex flex-spcbtwn flex-column hidden-mobile">
+			<nav id="nav-menu" class="flex flex-spcbtwn hidden-mobile">
 				<h4 id="main-nav" class="inline-desktop"> 
 					<a href="about.html">about</a> 
 					<a href="works.html">works</a> 
@@ -81,15 +81,16 @@
 			<p id="music" class="btn round-edges bold inline" onclick="toggleMusic()">music</p>
 		</footer>
 		
-		<script>
-			var MENU = document.getElementById("toggle-menu");
-			var NAV = document.getElementById("nav-menu");
-			var OPEN = "multimedia/png/open.png";
-			var CLOSE = "multimedia/png/close.png";
-			
+		<script>	
 			function toggleMenu(){
+				var MENU = document.getElementById("toggle-menu");
+				var NAV = document.getElementById("nav-menu");
+				var OPEN = "multimedia/png/open.png";
+				var CLOSE = "multimedia/png/close.png";
+				
 				if(MENU.src = OPEN){ MENU.src = CLOSE; } else { MENU.src = OPEN; };
-				NAV.classList.toggle("hidden-mobile","flex-spcbtwn","flex-center");
+				
+				NAV.classList.toggle("hidden-mobile", "flex-spcbtwn", "flex-column", "flex-center");
 			}
 		</script>
 	</body>
