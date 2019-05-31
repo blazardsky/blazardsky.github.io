@@ -99,14 +99,14 @@ header {
 footer {
 	position: absolute;
 	width: calc( 100% - 40px );
-	padding: 10px 5px;
-	bottom: 0;
+	margin: auto 0 0 0;
+	padding: 5px;
 }
 
 #toggle-menu { display: none;}
 
 @media only screen and (max-width: 1080px) {
-	body { font-size: 100%; }
+	body { font-size: 85%; }
 	.inline-desktop { display: block; }
 	.hidden-mobile { display: none; }
 	nav {
