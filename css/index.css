@@ -17,12 +17,11 @@
 	width: 100%;
 	z-index: -1;
 	color: #ffffff;
-	mix-blend-mode: overlay;
+	mix-blend-mode: lighten;
 }
 
 #blazardsky:hover {
 	color: #663399;
-	mix-blend-mode: multiply;
 }
 
 #blazardsky > h1 {
