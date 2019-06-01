@@ -12,7 +12,7 @@ function toggleMenu(){
 	
 	if(MENU.src = OPEN){ 
 		MENU.src = CLOSE;
-	} else if (MENU.src == CLOSE){
+	} else if (MENU.src = CLOSE){
 		MENU.src = OPEN;
 	} else { MENU.src = OPEN; };
 }
