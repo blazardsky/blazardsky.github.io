@@ -23,7 +23,7 @@
 #blazardsky:hover {	color: #663399; }
 #blazardsky > h1 { font-size: 6.725vw; }
 
-#footer {
+footer {
 	position: absolute !important;
 	bottom: 0;
 }

@@ -33,11 +33,10 @@
 }
 
 @media screen and (max-width: 1080px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-  #content {
-	padding: 1.2em;
-  }
+	.row { padding: 0; }
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+	#content { padding: 1.2em; }
 }
