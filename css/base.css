@@ -94,7 +94,7 @@ header {
 footer {
 	width: 100%;
 	margin: auto;
-	bottom: 0;
+	position: relative;
 	padding: 5px;
 	align-self: flex-end;
 }
