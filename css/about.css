@@ -15,9 +15,9 @@
 
 #content a { color: #000000; } 
 #profilepic {
-	margin-bottom: 6rem;
-	margin-top: 2rem;
-	max-width: 80%;
+	margin-bottom: 4rem;
+	margin-top: 1rem;
+	max-width: 70%;
 	height: auto;
 }
 #profilepic:hover {
