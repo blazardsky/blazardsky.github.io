@@ -1,39 +1,30 @@
-#container {
-	width: 100%;
-	height: 100%;
-	padding: 3.625em;
-}
-#content { 
-	background: #f1f1f1;
-	color: #4d004d;
-	text-align: center;
-	margin: auto;
-	padding: 3.625em;
-	width: 100%;
-	height: 100%;
-}
+/*
+	Blazardsky - about.css
+	blazardsky.space
+	Niccolò Agnoletti
+*/
 
-#content a { color: #000000; } 
 #profilepic {
-	margin-bottom: 4rem;
-	margin-top: 1rem;
-	max-width: 40%;
+	margin: 1.5rem;
+	width: 200px;
 	height: auto;
+	background: url('../multimedia/blazardsky.jpg') no-repeat center center scroll;
 }
 #profilepic:hover {
 	animation-name: sfocatura;
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	animation-timing-function: ease-out;
+	background: url('../multimedia/nic.jpg') no-repeat center center scroll;
 }
 
 	
 
 @keyframes sfocatura {
-	from {
+	0%, 100% {
 		-webkit-filter: blur(0px);
 		filter: blur(0px);
 	}
-	to {
+	50% {
 		-webkit-filter: blur(3px);
 		filter: blur(3px);	
 	}
