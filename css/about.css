@@ -8,17 +8,18 @@
 	margin: 1.5rem;
 	width: 500px;
 	height: 500px;
-	background: #000 url('../multimedia/blazardsky.jpg') no-repeat center center scroll;
+	background-color: #000;
+	background-image: url('../multimedia/blazardsky.jpg') no-repeat center center scroll;
 	border-radius: 50%;
+	transition: background-image .75s;
 }
 #profilepic:hover {
 	animation-name: sfocatura;
-	animation-duration: 0.5s;
+	animation-duration: .5s;
 	animation-timing-function: ease-out;
-	background: url('../multimedia/nic.jpg') no-repeat center center scroll;
+	background-image: url('../multimedia/nic.jpg') no-repeat center center scroll;
 }
 
-	
 
 @keyframes sfocatura {
 	0%, 100% {
