@@ -17,11 +17,7 @@
 }
 
 #blazardsky {
-	position: absolute;
-	margin: auto;
 	text-align: center;
-	height: 100%;
-	width: 100%;
 	z-index: -1;
 	color: #ffffff;
 	mix-blend-mode: lighten;
@@ -29,11 +25,6 @@
 
 #blazardsky:hover {	color: #663399; }
 #blazardsky > h1 { font-size: 6.725vw; }
-
-footer {
-	position: absolute !important;
-	bottom: 0;
-}
 
 #bgvideo {
 	z-index: -2;
