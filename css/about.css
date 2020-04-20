@@ -13,6 +13,10 @@
 	background-image: url('../multimedia/blazardsky.jpg') no-repeat center center scroll;
 	border-radius: 50%;
 	transition: background-image .75s;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 #profilepic:hover {
 	animation-name: sfocatura;
