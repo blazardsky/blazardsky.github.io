@@ -10,9 +10,9 @@
 	width: 160px;
 	height: 160px;
 	background-color: #000;
-	background-image: url('../multimedia/blazardsky.jpg') no-repeat center center scroll;
+	background: url('../multimedia/blazardsky.jpg') no-repeat center center scroll;
 	border-radius: 50%;
-	transition: background-image .75s;
+	transition: background .75s;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -22,7 +22,7 @@
 	animation-name: sfocatura;
 	animation-duration: .5s;
 	animation-timing-function: ease-out;
-	background-image: url('../multimedia/nic.jpg') no-repeat center center scroll;
+	background: url('../multimedia/nic.jpg') no-repeat center center scroll;
 }
 
 
