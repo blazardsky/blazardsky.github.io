@@ -12,7 +12,8 @@
 	background-color: #000;
 	background: url('../multimedia/blazardsky.jpg') no-repeat center center scroll;
 	border-radius: 50%;
-	transition: background .75s;
+	transition: background .25s;
+	transition-delay: .45s;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -27,6 +28,7 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	transition: background .25s;
 }
 
 
