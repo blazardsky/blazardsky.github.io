@@ -89,7 +89,7 @@ footer {
 
 #content a { color: #8040bf; } 
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 960px) {
 	
 	header {
 		padding: 0.5em 0em;
