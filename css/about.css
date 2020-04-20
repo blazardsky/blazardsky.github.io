@@ -6,9 +6,10 @@
 
 #profilepic {
 	margin: 1.5rem;
-	width: 220px;
-	height: auto;
+	width: 500px;
+	height: 500px;
 	background: #000 url('../multimedia/blazardsky.jpg') no-repeat center center scroll;
+	border-radius: 50%;
 }
 #profilepic:hover {
 	animation-name: sfocatura;
