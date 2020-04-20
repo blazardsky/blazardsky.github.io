@@ -23,6 +23,10 @@
 	animation-duration: .5s;
 	animation-timing-function: ease-out;
 	background: url('../multimedia/nic.jpg') no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 
