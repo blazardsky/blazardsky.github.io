@@ -50,7 +50,10 @@ a, a:focus{
     color: #f1f1f1;
 	text-decoration: none;
 }
-a:hover, a:active { color: #663399; }
+a:hover, a:active { 
+	color: #663399;
+	text-decoration: none;
+}
 
 header {
 	width: 100%;
