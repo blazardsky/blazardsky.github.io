@@ -56,7 +56,7 @@ a:hover, a:active {
 
 header {
 	width: 100%;
-	padding: 10px 25px;
+	/*padding: 2em 3em;*/
 }
 
 footer {
@@ -84,12 +84,16 @@ footer {
 	margin: auto;
 	padding: 1.825em;
 	width: 100%;
-	min-height: 85vh!important
+	min-height: 85vh !important;
 }
 
 #content a { color: #8040bf; } 
 
 @media only screen and (max-width: 1080px) {
+	
+	header {
+		padding: 0.5em 0em;
+	}
 	
 	#menu {
 		width: 100%;
@@ -97,7 +101,7 @@ footer {
 		position: absolute;
 		left: 0;
 		top: 0;
-		padding: 10px;
+		padding: 3em;
 		z-index: 2;
 		background: #010101;
 	}
@@ -114,7 +118,8 @@ footer {
 		margin: auto;
 		float: left;
 	}
+	#container { padding: 1em; }
 	
-	#content { padding: 1.2em; }
+	#content { padding: .825em; }
 
 }

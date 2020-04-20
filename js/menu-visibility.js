@@ -1,10 +1,11 @@
 function toggleMenu(){
 
 	var MENU_BTN = document.getElementById("toggle-menu");
+	var MENU = document.getElementById("menu");	toggleVisibility(MENU);
 
 	if (MENU_BTN.src.match(/open.png/) != null) { 
 		MENU_BTN.src.replace('open','close'); 
-	} else { MENU_BTN.src.replace('close','open'); }; 	
+	} else { MENU_BTN.src.replace('close','open'); };
 }
 
 function toggleVisibility(primary,secondary){
