@@ -7,8 +7,10 @@
 #profilepic {
 	margin: 0;
 	margin-bottom: 1em;
-	width: 160px;
-	height: 160px;
+	max-width: 100%;
+	max-height: 100%;
+	height: 165px;
+	width: 165px;
 	background-color: #000;
 	background: url('../multimedia/blazardsky.jpg') no-repeat center center scroll;
 	border-radius: 50%;
@@ -42,7 +44,12 @@
 		filter: blur(3px);	
 	}
 }
-
+@media only screen and (max-width: 290px) { 
+	#profilepic {
+		width: 50px;
+		height: 50px;
+	}
+}
 @media only screen and (min-width: 430px) { 
 	#profilepic {
 		width: 200px;
