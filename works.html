@@ -354,7 +354,7 @@
 		let gridImagePopup = document.getElementById('grid-image-popup');
 		document.querySelectorAll('.grid-img-data').forEach(
 		  elem => elem.addEventListener('click', function() {
-  		    //gridImagePopup.scrollTop = 0;
+  		    gridImagePopup.scrollTop = 0;
 		    document.body.style.overflow='hidden';
 		    document.getElementById('popup-card-img').src = elem.getAttribute('data-work-src');
 		    if (elem.hasAttribute('data-work-http')) {
@@ -363,7 +363,7 @@
 			   document.getElementById('workwebsite').innerHTML = "";
 			}
 		    if (elem.hasAttribute('data-work-more')) {
-		      document.getElementById('workmore').innerHTML = '<a  class="card-link" href="' + elem.getAttribute('data-work-more') + '" rel="me" target="_blank">view more here</a> | ';
+		      document.getElementById('workmore').innerHTML = '<a  class="card-link" href="' + elem.getAttribute('data-work-more') + '" rel="me" target="_blank">view more here</a></span><span> | ';
 		    } else {
 			   document.getElementById('workmore').innerHTML = "";
 			}
@@ -374,15 +374,12 @@
 		    gridImagePopup.classList.remove('d-none');
 		  })
 		);
-		
 		function closeCard() {
 		  gridImagePopup.classList.add('d-none');
 		  document.body.style.overflow='auto';
 		  return;
 		}
-		
-		document.getElementById('closeCardPopup').addEventListener('click', closeCard());
-
+		document.getElementById('closeCardPopup').addEventListener('click', function(){ closeCard(); });
 		document.addEventListener("keydown", event => {
 		  if (event.keyCode === 27 || event.keyCode === 8) {
 		    event.preventDefault();
