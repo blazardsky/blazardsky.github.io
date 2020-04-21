@@ -38,7 +38,7 @@
 						<small><span id="workwebsite"></span></small>
 					</p>
 					<p id="worktext" class="card-text"></p>
-					<p class="card-text text-center text-muted"><span class="btn" id="workmore"></span><span class="btn" id="closeCardPopup">close this window</span></p>
+					<p class="card-text text-center text-muted" id="workmore"></p>
 				</div>
 			</div>
 		</div>
@@ -366,9 +366,9 @@
 			   document.getElementById('workwebsite').innerHTML = "";
 			}
 		    if (elem.hasAttribute('data-work-more')) {
-		      document.getElementById('workmore').innerHTML = '<a  class="card-link" href="' + elem.getAttribute('data-work-more') + '" rel="me" target="_blank">view more here</a></span><span> | ';
+		      document.getElementById('workmore').innerHTML = '<a class="card-link btn" href="' + elem.getAttribute('data-work-more') + '" rel="me" target="_blank">view more here</a> | <span class="btn" id="closeCardPopup">close this window</span>';
 		    } else {
-			   document.getElementById('workmore').innerHTML = "";
+			   document.getElementById('workmore').innerHTML = '<span class="btn" id="closeCardPopup">close this window</span>';
 			}
 		    document.getElementById('worktitle').innerHTML = elem.getAttribute('data-work-title');
 		    document.getElementById('worktext').innerHTML = elem.getAttribute('data-work-text');
