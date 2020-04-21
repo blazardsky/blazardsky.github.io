@@ -16,7 +16,6 @@
 }
 
 #grid > .card, 
-#grid > .card > .card-img, 
 #grid > .card > .card-img-top {
 	border-radius: 0;
 }
