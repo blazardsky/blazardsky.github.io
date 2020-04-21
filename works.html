@@ -33,7 +33,7 @@
 				document.getElementById('worktext').innerHTML = elem.getAttribute('data-work-text');
 				document.getElementById('worktype').innerHTML = elem.getAttribute('data-work-type');
 				document.getElementById('workfor').innerHTML = elem.getAttribute('data-work-for');
-				document.getElementById('grid-image-popup').classList.remove('d-none');
+				toggleVisibility('grid-image-popup')
 			})
 		);
 		
