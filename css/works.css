@@ -28,8 +28,11 @@
 }
 #grid-image-popup .card > .card-img-top {
 	margin: .825em;
-	max-height: 40vh;
+	max-width: 50vh;
+	max-height: 100%;
 	width: auto;
+	height: auto;
+	align-self: center;
 }
 
 .grid-img-data {
