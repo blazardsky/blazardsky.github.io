@@ -1,7 +1,7 @@
 #grid-image-popup {
 	height: 100%;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	z-index: 999;
 	top: 0;
 	left: 0;
@@ -19,6 +19,17 @@
 .card, 
 .card > .card-img-top {
 	border-radius: 0;
+}
+
+#grid-image-popup .card {
+	background: #0a0a0a;
+	color: #1f1f1f;
+	
+}
+#grid-image-popup .card > .card-img-top {
+	margin: .825em;
+	max-height: 40vh;
+	width: auto;
 }
 
 .grid-img-data {
