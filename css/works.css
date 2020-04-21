@@ -15,7 +15,7 @@
 	position: fixed;
 	z-index: 999;
 	background: #000;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .card, 

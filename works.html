@@ -354,8 +354,8 @@
 		let gridImagePopup = document.getElementById('grid-image-popup');
 		document.querySelectorAll('.grid-img-data').forEach(
 		  elem => elem.addEventListener('click', function() {
-  		    gridImagePopup.scrollTop = 0;
-		    document.body.style.overflowY='none';
+  		    //gridImagePopup.scrollTop = 0;
+		    document.body.style.overflow='hidden';
 		    document.getElementById('popup-card-img').src = elem.getAttribute('data-work-src');
 		    if (elem.hasAttribute('data-work-http')) {
 		      document.getElementById('workwebsite').innerHTML = ' | www: <a  class="card-link" href="' + elem.getAttribute('data-work-http') + '" target="_blank">' + elem.getAttribute('data-work-website') + '</a>';
@@ -375,17 +375,18 @@
 		  })
 		);
 		
-		document.getElementById('closeCardPopup').addEventListener('click', function() {
-			toggleVisibility('grid-image-popup');
-			document.body.style.overflowY='scroll';
-		});
+		function closeCard() {
+		  gridImagePopup.classList.add('d-none');
+		  document.body.style.overflow='auto';
+		  return;
+		}
+		
+		document.getElementById('closeCardPopup').addEventListener('click', closeCard());
 
 		document.addEventListener("keydown", event => {
 		  if (event.keyCode === 27 || event.keyCode === 8) {
 		    event.preventDefault();
-		    gridImagePopup.classList.add('d-none');
-			document.body.style.overflowY='auto';
-		    return;
+			closeCard();
 		  }
 		});
 		</script>
