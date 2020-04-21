@@ -25,13 +25,12 @@
 #grid-image-popup .card {
 	background: #0a0a0a;
 	color: #f1f1f1;
-	height: 100%;
-	width: 75vw;
+	min-height: 100%;
 	padding: 2em;
 }
 #grid-image-popup .card > .card-img-top {
 	margin: .825em;
-	max-width: 74vw;
+	max-width: 75vw;
 	max-height: 60vh;
 	width: auto;
 	height: auto;
