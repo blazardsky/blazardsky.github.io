@@ -8,6 +8,7 @@
 
 html {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	scroll-behavior: smooth;
 	height: 100%;
 	width: 100%;
 }

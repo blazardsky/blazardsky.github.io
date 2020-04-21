@@ -1,4 +1,4 @@
-#grid-image-popup-before,
+
 #grid-image-popup {
 	height: 100%;
 	width: 100%;
@@ -12,16 +12,10 @@
 	align-content: center;
 	text-align: left;
 	flex-direction: column;
-}
-#grid-image-popup-before {
 	position: fixed;
-	z-index: 998;
-	background: #000;
-}
-#grid-image-popup {
-	position: absolute;
 	z-index: 999;
 	background: #000;
+	overflow-y: scroll;
 }
 
 .card, 
@@ -32,6 +26,7 @@
 #grid-image-popup .card {
 	background: #0a0a0a;
 	color: #f1f1f1;
+	height: 100%;
 	
 }
 #grid-image-popup .card > .card-img-top {
