@@ -1,19 +1,27 @@
+#grid-image-popup-before,
 #grid-image-popup {
 	height: 100%;
 	width: 100%;
-	position: fixed;
-	z-index: 999;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: #000;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
 	text-align: left;
 	flex-direction: column;
+}
+#grid-image-popup-before {
+	position: fixed;
+	z-index: 998;
+	background: #000;
+}
+#grid-image-popup {
+	position: absolute;
+	z-index: 999;
+	background: #000;
 }
 
 .card, 
