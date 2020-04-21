@@ -35,7 +35,7 @@
 			elem => elem.addEventListener('click', function(){
 				imagePopup.src = elem.getAttribute('data-work-src');
 				if (elem.hasAttribute('data-work-http')) {
-					document.getElementById('workwebsite').innerHTML = 'www: <a  class="card-link" href="'+elem.getAttribute('data-work-http')+'" target="_blank">'+elem.getAttribute('data-work-website')+'</a>';
+					document.getElementById('workwebsite').innerHTML = ' | www: <a  class="card-link" href="'+elem.getAttribute('data-work-http')+'" target="_blank">'+elem.getAttribute('data-work-website')+'</a>';
 				} if (elem.hasAttribute('data-work-more')) {
 					document.getElementById('workmore').innerHTML = '<a  class="card-link" href="'+elem.getAttribute('data-work-more')+'" rel="me" target="_blank">view more here</a> | ';
 				}
@@ -43,6 +43,8 @@
 				document.getElementById('worktext').innerHTML = elem.getAttribute('data-work-text');
 				document.getElementById('worktype').innerHTML = elem.getAttribute('data-work-type');
 				document.getElementById('workfor').innerHTML = elem.getAttribute('data-work-for');
+				
+				document.getElementById('grid-image-popup').classList.remove('d-none');
 			}
 		  )
 		);
@@ -66,9 +68,9 @@
 				<div class="card-body">
 					<h5 id="worktitle" class="card-title"></h5>
 					<p class="card-text text-muted">
-						<small>type: <span id="worktype"></span> </small>
-						<small>for: <span id="workfor"></span> </small>
-						<small><span id="workwebsite"></span></small>
+						<small>type: <strong id="worktype"></strong> | </small>
+						<small>for: <strong id="workfor"></strong></small>
+						<small><strong id="workwebsite"></strong></small>
 					</p>
 					<p id="worktext" class="card-text"></p>
 					<p class="card-text text-center text-muted"><span id="workmore"></span><span class="btn" onclick="toggleVisibility('grid-image-popup')">close this window</span> </p>
@@ -105,23 +107,18 @@
 					<!-- GRID -->
 					<div id="grid" class="container-fluid card-columns">
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/CD_COVER-TOB_LUNAR.png" alt="Lunar by The Old Blossom cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
-								class="grid-img-data"
-								data-work-src="multimedia/grid/CD_COVER-TOB_LUNAR.png"
-								data-work-type="CD COVER" 
-								data-work-for="The Old Blossom" 
-								data-work-http="https://instagram.com/theofficialtob/" 
-								data-work-website="@theofficialtob" 
-								data-work-title="Lunar Cd Cover Artwork" 
-								data-work-text="This is the cover for the second album of the band, released November 2018. I also curated the video editing for their youtube channel." 
-								data-work-more="https://www.behance.net/gallery/72733709/TOB-LUNAR-CD-cover">
-							</div>
+							<img class="card-img-top grid-img-data" src="multimedia/grid/CD_COVER-TOB_LUNAR.png" alt="Lunar by The Old Blossom cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							data-work-src="multimedia/grid/CD_COVER-TOB_LUNAR.png"
+							data-work-type="CD COVER" 
+							data-work-for="The Old Blossom" 
+							data-work-http="https://instagram.com/theofficialtob/" 
+							data-work-website="@theofficialtob" 
+							data-work-title="Lunar Cd Cover Artwork" 
+							data-work-text="This is the cover for the second album of the band, released November 2018. I also curated the video editing for their youtube channel." 
+							data-work-more="https://www.behance.net/gallery/72733709/TOB-LUNAR-CD-cover">
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/CD_COVER-TOB_NAKED.png" alt="Naked by The Old Blossom cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
-								class="grid-img-data"
+							<img class="card-img-top grid-img-data" src="multimedia/grid/CD_COVER-TOB_NAKED.png" alt="Naked by The Old Blossom cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
 								data-work-src="multimedia/grid/CD_COVER-TOB_NAKED.png" 
 								data-work-type="CD COVER" 
 								data-work-for="The Old Blossom" 
@@ -130,11 +127,10 @@
 								data-work-title="Naked Cd Cover Artwork" 
 								data-work-text="This is the cover for the first album of the band, released July 2017. It is also the first cover I made under request for someone." 
 								data-work-more="https://www.behance.net/gallery/54420997/The-Old-Blossom-Logo-and-EP-Cover-design" >
-							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/CD_COVER-ARAPAIMA.png" alt="Arapaima by Seth Burton cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/CD_COVER-ARAPAIMA.png" alt="Arapaima by Seth Burton cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/CD_COVER-ARAPAIMA.png"
 								data-work-type="CD COVER" 
@@ -143,11 +139,10 @@
 								data-work-website="sethburtonmusic.com" 
 								data-work-title="Arapaima Cd Cover Artwork" 
 								data-work-text="This is the cover for the first single of the artist, released January 2020. The design is based on the eye of an arapaima fish imitating drops falling in a river; we first tried it in black but Seth favoured a white version foiled with gold." >
-							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/CD_COVER-UNTITLED.png" alt="untitled by Seth Burton cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/CD_COVER-UNTITLED.png" alt="untitled by Seth Burton cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/CD_COVER-UNTITLED.png"
 								data-work-type="CD COVER" 
@@ -159,8 +154,8 @@
 							</div>
 						</div>
 						<!--div class="card">
-							<img class="card-img-top" src="multimedia/grid/CD_COVER-TRAPPIST-1.png" alt="Trappist-1 by Seth Burton cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/CD_COVER-TRAPPIST-1.png" alt="Trappist-1 by Seth Burton cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/CD_COVER-TRAPPIST-1.png"						
 								data-work-type="CD COVER" 
@@ -172,8 +167,8 @@
 							</div>
 						</div-->
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/CD_COVER-AlmostJack-Who.jpg" alt="Who? by Almost Jack cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/CD_COVER-AlmostJack-Who.jpg" alt="Who? by Almost Jack cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/CD_COVER-AlmostJack-Who.jpg"
 								data-work-type="CD COVER" 
@@ -185,8 +180,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/CD_COVER-HANGOVER.png" alt="Hangover by Prendila Morbida cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/CD_COVER-HANGOVER.png" alt="Hangover by Prendila Morbida cd cover" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/CD_COVER-HANGOVER.png"
 								data-work-type="CD COVER" 
@@ -198,8 +193,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/MOCKUP-CarteF.png" alt="Florentia Playing Cards Prototype Mockup" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/MOCKUP-CarteF.png" alt="Florentia Playing Cards Prototype Mockup" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/MOCKUP-CarteF.png"
 								data-work-type="MOCKUP" 
@@ -209,8 +204,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/LOGO-mad_dj.png" alt="Logo for Mad Dj" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/LOGO-mad_dj.png" alt="Logo for Mad Dj" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/LOGO-mad_dj.png"
 								data-work-type="LOGO" 
@@ -222,8 +217,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/LOGO-LandiniShoes.png" alt="Logo for Landini Shoes" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/LOGO-LandiniShoes.png" alt="Logo for Landini Shoes" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/LOGO-LandiniShoes.png"
 								data-work-type="LOGO" 
@@ -236,8 +231,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/LOGO-feedgroup.eu.png" alt="Logo for feedgroup.eu" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/LOGO-feedgroup.eu.png" alt="Logo for feedgroup.eu" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/LOGO-feedgroup.eu.png" 
 								data-work-type="LOGO" 
@@ -250,8 +245,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/LOGO-Lykophos.jpg" alt="Logo for Lykophos Games" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/LOGO-Lykophos.jpg" alt="Logo for Lykophos Games" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/LOGO-Lykophos.jpg" 
 								data-work-type="LOGO" 
@@ -263,8 +258,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/LOGO_tob-the-old-blossom.png" alt="Logo for The Old Blossom" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/LOGO_tob-the-old-blossom.png" alt="Logo for The Old Blossom" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/LOGO_tob-the-old-blossom.png"
 								data-work-type="LOGO" 
@@ -276,8 +271,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/LOGO_SophiaConsulenze.png" alt="ogo for Sophia Consulenze" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/LOGO_SophiaConsulenze.png" alt="ogo for Sophia Consulenze" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/LOGO_SophiaConsulenze.png"
 								data-work-type="LOGO" 
@@ -289,8 +284,8 @@
 							</div>
 						</div>
 						<!--div class="card">
-							<img class="card-img-top" src="multimedia/grid/LOGO_FatEvents.png" alt="Logo for FatEvents" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/LOGO_FatEvents.png" alt="Logo for FatEvents" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/LOGO_FatEvents.png"
 								data-work-type="LOGO" 
@@ -302,8 +297,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/LOGO_AlmostJack.png" alt="Logo for Almost Jack" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/LOGO_AlmostJack.png" alt="Logo for Almost Jack" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/LOGO_AlmostJack.png"
 								data-work-type="LOGO" 
@@ -315,8 +310,8 @@
 							</div>
 						</div-->
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-ciclo_della-vita.png" alt="Digital Illustration" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-ciclo_della-vita.png" alt="Digital Illustration" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-ciclo_della-vita.png"
 								data-work-type="DIGITAL ILLUSTRATION" 
@@ -326,8 +321,8 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-faccia_di_gelato.png" alt="Digital Illustration of an icecream" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-faccia_di_gelato.png" alt="Digital Illustration of an icecream" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-faccia_di_gelato.png"
 								data-work-type="DIGITAL ILLUSTRATION" 
@@ -337,8 +332,8 @@
 							</div>
 						</div>
 						<div class="card w-75">
-							<img class="card-img-top" src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-contemplazione.png" alt="Digital Illustration of space" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-contemplazione.png" alt="Digital Illustration of space" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-contemplazione.png"
 								data-work-type="DIGITAL ILLUSTRATION" 
@@ -347,19 +342,18 @@
 							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-amanti.png" alt="Digital illustration" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-amanti.png" alt="Digital illustration" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-amanti.png" 
 								data-work-type="DIGITAL ILLUSTRATION" 
 								data-work-for="<i>personal</i>" 
 								data-work-title="Lovers" 
 								data-work-text="I made this after completng a pzzle in a game, which made me think about two lovers" >
-							</div>
+							
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/PERSONALE-Collapse.png" alt="Personal Artwork" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/PERSONALE-Collapse.png" alt="Personal Artwork" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy" 
 								class="grid-img-data"
 								data-work-src="multimedia/grid/PERSONALE-Collapse.png"
 								data-work-type="DIGITAL ARTWORK" 
@@ -367,44 +361,38 @@
 								data-work-title="Collapse_" 
 								data-work-text='<blockquote class="blockquote mb-0"><p>This is the end, beautiful friend<br>This is the end, my only friend<br>The end of our elaborate plans<br>The end of evrything that stands<br>The end</p><footer class="blockquote-footer"><small class="text-muted">Jim Morrison, The Doors in <cite title="Source Title">The End</cite></small></footer>' 
 								data-work-more="https://www.behance.net/gallery/53114049/Collapse_" >
-							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/PERSONALE-buddhamarket.jpg" alt="Personal Artwork" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/PERSONALE-buddhamarket.jpg" alt="Personal Artwork" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy" 
 								class="grid-img-data"
 								data-work-src="multimedia/grid/PERSONALE-buddhamarket.jpg"
 								data-work-type="DIGITAL ARTWORK" 
 								data-work-for="<i>personal</i>" 
 								data-work-title="Buddha Market" 
 								data-work-text="I really like this one." >
-							</div>
 						</div>
 						<div class="card">
-							<img class="card-img-top" src="multimedia/grid/PERSONALE-delfini-spaziali.png" alt="Personal artwork" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/PERSONALE-delfini-spaziali.png" alt="Personal artwork" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy" 
 								class="grid-img-data"
 								data-work-src="multimedia/grid/PERSONALE-delfini-spaziali.png" 
 								data-work-type="DIGITAL ARTWORK" 
 								data-work-for="<i>personal</i>" 
 								data-work-title="Delfini spaziali" 
 								data-work-text="Dolphins swimming in the sky, in an endless circle." >
-							</div>
 						</div>
 						<div class="card w-50">
-							<img class="card-img-top" src="multimedia/grid/PERSONALE-RENDERING-3D-torre.png" alt="CGI Render of a tower" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/PERSONALE-RENDERING-3D-torre.png" alt="CGI Render of a tower" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy" 
 								class="grid-img-data"
 								data-work-src="multimedia/grid/PERSONALE-RENDERING-3D-torre.png"
 								data-work-type="3D RENDER" 
 								data-work-for="<i>personal</i>" 
 								data-work-title="The Tower" 
 								data-work-text="A random tower I made while learning blender 2.8" >
-							</div>
+							
 						</div>
 						<!--div class="card">
-							<img class="card-img-top" src="multimedia/grid/" alt="" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
-							<div
+							<img class="card-img-top grid-img-data" src="multimedia/grid/" alt="" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy"
+							
 								class="grid-img-data"
 								data-work-src=""
 								data-work-type="" 
@@ -414,7 +402,7 @@
 								data-work-title="" 
 								data-work-text="" 
 								data-work-more="https://" >
-							</div>
+							
 						</div-->
 					</div> 
 					<!-- // GRID -->
