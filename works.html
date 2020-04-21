@@ -22,46 +22,38 @@
 		<link rel="stylesheet" href="css/works.css">
 		
 		<!--javascript-->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="js/menu_visibility.js"></script>
 		<script>
-		
 			AOS.init();
-			
-			// rimozione loader
-			window.onload = (event) => { document.getElementById('page-loading-container').classList.add('d-none'); };
-			
-			// creazione info
-			let gridImageList = document.querySelectorAll('.grid-img-data');
-			var imagePopup = document.getElementById('popup-card-img');
+		</script>
+		<script>		
+		// creazione info
+		let gridImageList = document.querySelectorAll('.grid-img-data');
+		var imagePopup = document.getElementById('popup-card-img');
 
-			gridImageList.forEach( 
-				elem => elem.addEventListener('click', function(){
-					imagePopup.src = elem.getAttribute('data-work-src');
-					if (elem.hasAttribute('data-work-http')) {
-						document.getElementById('workwebsite').innerHTML = 'www: <a href="'.elem.getAttribute('data-work-http').'" target="_blank">'.elem.getAttribute('data-work-website').'</a>';
-					} if (elem.hasAttribute('data-work-more')) {
-						document.getElementById('workmore').innerHTML = '<a href="'.elem.getAttribute('data-work-more').'" rel="me" target="_blank">view more here</a> | ';
-					}
-					document.getElementById('worktitle').innerHTML = elem.getAttribute('data-work-title');
-					document.getElementById('worktext').innerHTML = elem.getAttribute('data-work-text');
-					document.getElementById('worktype').innerHTML = elem.getAttribute('data-work-type');
-					document.getElementById('workfor').innerHTML = elem.getAttribute('data-work-for');
+		gridImageList.forEach( 
+			elem => elem.addEventListener('click', function(){
+				imagePopup.src = elem.getAttribute('data-work-src');
+				if (elem.hasAttribute('data-work-http')) {
+					document.getElementById('workwebsite').innerHTML = 'www: <a  class="card-link" href="'+elem.getAttribute('data-work-http')+'" target="_blank">'+elem.getAttribute('data-work-website')+'</a>';
+				} if (elem.hasAttribute('data-work-more')) {
+					document.getElementById('workmore').innerHTML = '<a  class="card-link" href="'+elem.getAttribute('data-work-more')+'" rel="me" target="_blank">view more here</a> | ';
 				}
-			  )
-			);
-			
-			document.addEventListener("keydown", event => {
-				if (event.keyCode === 27 || event.keyCode === 8) {
-					event.preventDefault();
-					document.getElementById('grid-image-popup').classList.add('d-none'); 
-					return;
-				}
-			});
-
+				document.getElementById('worktitle').innerHTML = elem.getAttribute('data-work-title');
+				document.getElementById('worktext').innerHTML = elem.getAttribute('data-work-text');
+				document.getElementById('worktype').innerHTML = elem.getAttribute('data-work-type');
+				document.getElementById('workfor').innerHTML = elem.getAttribute('data-work-for');
+			}
+		  )
+		);
+		
+		document.addEventListener("keydown", event => {
+			if (event.keyCode === 27 || event.keyCode === 8) {
+				event.preventDefault();
+				document.getElementById('grid-image-popup').classList.add('d-none'); 
+				return;
+			}
+		});
 		</script>
 	
     </head>
@@ -108,7 +100,7 @@
 					<div class="text-center pb-3">
 						<h1> Portfolio </h1>
 						<h3> Some of my works </h3>
-						<p> Click on the images to view some project info.</p>
+						<p><small><i>Click on the images to view some info about the project.<i></small></p>
 					</div>
 					<!-- GRID -->
 					<div id="grid" class="container-fluid card-columns">
@@ -344,7 +336,7 @@
 								data-work-text="One of the first digital illustrations I made." >
 							</div>
 						</div>
-						<div class="card">
+						<div class="card w-75">
 							<img class="card-img-top" src="multimedia/grid/PERSONALE-ILLUSTRAZIONE-DIGITALE-contemplazione.png" alt="Digital Illustration of space" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
 							<div
 								class="grid-img-data"
@@ -399,7 +391,7 @@
 								data-work-text="Dolphins swimming in the sky, in an endless circle." >
 							</div>
 						</div>
-						<div class="card">
+						<div class="card w-50">
 							<img class="card-img-top" src="multimedia/grid/PERSONALE-RENDERING-3D-torre.png" alt="CGI Render of a tower" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-anchor-placement="center-center" loading="lazy">
 							<div
 								class="grid-img-data"
@@ -433,7 +425,10 @@
 				<p class="d-inline color-6">Copyright 2020 | Niccol&ograve Agnoletti - All rights reserved.</p>
 				<p class="float-right">	<a href="multimedia/info.txt"> info.txt </a></p>
 			</footer>
-
 		</div>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	</body>
 </html>
