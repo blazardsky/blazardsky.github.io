@@ -7,8 +7,7 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: #1a1a1a;
-	color: #f1f1f1;
+	background: #0a0a0a;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -17,8 +16,8 @@
 	flex-direction: column;
 }
 
-#grid > .card, 
-#grid > .card > .card-img-top {
+.card, 
+.card > .card-img-top {
 	border-radius: 0;
 }
 

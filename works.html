@@ -28,12 +28,12 @@
 			elem => elem.addEventListener('click', function(){
 				document.getElementById('popup-card-img').src = elem.getAttribute('data-work-src');
 				if (elem.hasAttribute('data-work-http')) { document.getElementById('workwebsite').innerHTML = ' | www: <a  class="card-link" href="'+elem.getAttribute('data-work-http')+'" target="_blank">'+elem.getAttribute('data-work-website')+'</a>'; }
-				if (elem.hasAttribute('data-work-more')) { document.getElementById('workmore').innerHTML = '<a  class="card-link" href="'+elem.getAttribute('data-work-more')+'" rel="me" target="_blank">view more here</a> | '; }
+				if (elem.hasAttribute('data-work-more')) { document.getElementById('workmore').innerHTML = '<a class="card-link" href="'+elem.getAttribute('data-work-more')+'" rel="me" target="_blank">view more here</a> | '; }
 				document.getElementById('worktitle').innerHTML = elem.getAttribute('data-work-title');
 				document.getElementById('worktext').innerHTML = elem.getAttribute('data-work-text');
 				document.getElementById('worktype').innerHTML = elem.getAttribute('data-work-type');
 				document.getElementById('workfor').innerHTML = elem.getAttribute('data-work-for');
-				toggleVisibility('grid-image-popup')
+				toggleVisibility('grid-image-popup');
 			})
 		);
 		
@@ -61,7 +61,7 @@
 						<small><strong id="workwebsite"></strong></small>
 					</p>
 					<p id="worktext" class="card-text"></p>
-					<p class="card-text text-center text-muted"><span id="workmore"></span><span class="btn" onclick="toggleVisibility('grid-image-popup')">close this window</span> </p>
+					<p class="card-text text-center text-muted"><span class="btn" id="workmore"></span><span class="btn" onclick="toggleVisibility('grid-image-popup')">close this window</span></p>
 				</div>
 			</div>
 		</div>
