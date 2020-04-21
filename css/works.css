@@ -27,8 +27,7 @@
 	background: #0a0a0a;
 	color: #f1f1f1;
 	height: 100%;
-	width: auto;
-	max-width: 100vw;
+	width: 75vw;
 	
 }
 #grid-image-popup .card > .card-img-top {
