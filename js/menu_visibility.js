@@ -1,8 +1,6 @@
 function toggleMenu(){
-
-	var MENU_BTN = document.getElementById("toggle-menu");
 	toggleVisibility('menu');
-	
+	var MENU_BTN = document.getElementById("toggle-menu");	
 	if (MENU_BTN.src.match(/open/) != null) { 
 		MENU_BTN.src.replace('open','close'); 
 	} else { MENU_BTN.src.replace('close','open'); };
