@@ -17,37 +17,24 @@
 		<!--css--> 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/works.css">
 		
 		<!--javascript-->
 		<script src="js/menu_visibility.js"></script>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script>
-			AOS.init();
-		</script>
 		<script>		
 		// creazione info
-		let gridImageList = document.querySelectorAll('.grid-img-data');
-		var imagePopup = document.getElementById('popup-card-img');
-
-		gridImageList.forEach( 
+		document.querySelectorAll('.grid-img-data').forEach( 
 			elem => elem.addEventListener('click', function(){
-				imagePopup.src = elem.getAttribute('data-work-src');
-				if (elem.hasAttribute('data-work-http')) {
-					document.getElementById('workwebsite').innerHTML = ' | www: <a  class="card-link" href="'+elem.getAttribute('data-work-http')+'" target="_blank">'+elem.getAttribute('data-work-website')+'</a>';
-				} if (elem.hasAttribute('data-work-more')) {
-					document.getElementById('workmore').innerHTML = '<a  class="card-link" href="'+elem.getAttribute('data-work-more')+'" rel="me" target="_blank">view more here</a> | ';
-				}
+				document.getElementById('popup-card-img').src = elem.getAttribute('data-work-src');
+				if (elem.hasAttribute('data-work-http')) { document.getElementById('workwebsite').innerHTML = ' | www: <a  class="card-link" href="'+elem.getAttribute('data-work-http')+'" target="_blank">'+elem.getAttribute('data-work-website')+'</a>'; }
+				if (elem.hasAttribute('data-work-more')) { document.getElementById('workmore').innerHTML = '<a  class="card-link" href="'+elem.getAttribute('data-work-more')+'" rel="me" target="_blank">view more here</a> | '; }
 				document.getElementById('worktitle').innerHTML = elem.getAttribute('data-work-title');
 				document.getElementById('worktext').innerHTML = elem.getAttribute('data-work-text');
 				document.getElementById('worktype').innerHTML = elem.getAttribute('data-work-type');
 				document.getElementById('workfor').innerHTML = elem.getAttribute('data-work-for');
-				
 				document.getElementById('grid-image-popup').classList.remove('d-none');
-			}
-		  )
+			})
 		);
 		
 		document.addEventListener("keydown", event => {
@@ -63,7 +50,7 @@
 	
     <body>
 		
-		<div id="grid-image-popup" data-aos="fade-in" data-aos-easing="ease-out" class="card-columns d-none">
+		<div id="grid-image-popup" class="card-columns d-none">
 			<div class="container card border-0">
 				<img id="popup-card-img" class="card-img-top" src="" alt="">
 				<div class="card-body">
