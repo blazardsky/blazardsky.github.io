@@ -1,21 +1,12 @@
-#page-loading-container,
 #grid-image-popup {
 	height: 100%;
 	width: 100%;
-	position: absolute;
-	z-index: 999;
+	position: fixed;
+	z-index: 9;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
-}
-#page-loading-container {
-	background: #0a0a0a;
-	color: #a0a0a0;
-	display: block;
-}
-
-#grid-image-popup {
 	display: flex;
 	align-items: center;
 	justify-content: center;
