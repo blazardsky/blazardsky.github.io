@@ -26,7 +26,6 @@
 	
     <body>
 		
-		<div id="grid-image-popup-before" class="d-none"> </div>
 		<div id="grid-image-popup" class="d-none">
 			<div class="w-75 card border-0">
 				<img id="popup-card-img" class="card-img-top" src="" alt="">
@@ -38,7 +37,7 @@
 						<small><span id="workwebsite"></span></small>
 					</p>
 					<p id="worktext" class="card-text"></p>
-					<p class="card-text text-center text-muted"><span class="btn" id="workmore"></span><span class="btn" onclick="toggleVisibility('grid-image-popup','grid-image-popup-before')">close this window</span></p>
+					<p class="card-text text-center text-muted"><span class="btn" id="workmore"></span><span class="btn" id="closeCardPopup">close this window</span></p>
 				</div>
 			</div>
 		</div>
@@ -350,10 +349,13 @@
 				<p class="float-right">	<a href="multimedia/info.txt"> info.txt </a></p>
 			</footer>
 		</div>
-		<script>		
+		<script>
 		// creazione info
+		let gridImagePopup = document.getElementById('grid-image-popup');
 		document.querySelectorAll('.grid-img-data').forEach(
 		  elem => elem.addEventListener('click', function() {
+  		    gridImagePopup.scrollTop = 0;
+		    document.body.style.overflowY='none';
 		    document.getElementById('popup-card-img').src = elem.getAttribute('data-work-src');
 		    if (elem.hasAttribute('data-work-http')) {
 		      document.getElementById('workwebsite').innerHTML = ' | www: <a  class="card-link" href="' + elem.getAttribute('data-work-http') + '" target="_blank">' + elem.getAttribute('data-work-website') + '</a>';
@@ -369,14 +371,20 @@
 		    document.getElementById('worktext').innerHTML = elem.getAttribute('data-work-text');
 		    document.getElementById('worktype').innerHTML = elem.getAttribute('data-work-type');
 		    document.getElementById('workfor').innerHTML = elem.getAttribute('data-work-for');
-		    document.getElementById('grid-image-popup-before').classList.remove('d-none'); document.getElementById('grid-image-popup').classList.remove('d-none');
+		    gridImagePopup.classList.remove('d-none');
 		  })
 		);
+		
+		document.getElementById('closeCardPopup').addEventListener('click', function() {
+			toggleVisibility('grid-image-popup');
+			document.body.style.overflowY='scroll';
+		});
 
 		document.addEventListener("keydown", event => {
 		  if (event.keyCode === 27 || event.keyCode === 8) {
 		    event.preventDefault();
-		    document.getElementById('grid-image-popup').classList.add('d-none'); document.getElementById('grid-image-popup-before').classList.add('d-none');
+		    gridImagePopup.classList.add('d-none');
+			document.body.style.overflowY='auto';
 		    return;
 		  }
 		});
