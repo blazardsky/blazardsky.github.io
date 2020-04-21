@@ -27,7 +27,7 @@
 	color: #f1f1f1;
 	height: 100%;
 	width: 75vw;
-	
+	padding: 2em;
 }
 #grid-image-popup .card > .card-img-top {
 	margin: .825em;
