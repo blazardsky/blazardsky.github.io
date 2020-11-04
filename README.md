@@ -1,2 +1,2 @@
-# blazardsky.github.io | blazardSKy.space
+# blazardsky.github.io | blazardsky.space
 personal website
