@@ -1,2 +1,2 @@
-# noiwyr.github.io
+# blazardsky.github.io | blazardSKy.space
 personal website
