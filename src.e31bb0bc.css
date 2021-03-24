@@ -815,13 +815,21 @@ a.btn.btn-simple:hover {
 a.btn#cta {
   color: #eee;
   background: linear-gradient(120deg, rgba(17, 17, 17, 0.3) 0%, #4f3a4b 30%, rgba(185, 25, 27, 0.3) 95%);
-  width: 200px;
   font-weight: 500;
-  height: 80px;
-  line-height: 80px;
-  font-size: 1.8rem;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.2rem;
   border-radius: 51% 49% 77% 23%/59% 43% 57% 41%;
   padding: 0;
+}
+@media (min-width: 996px) {
+  a.btn#cta {
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 1.8rem;
+  }
 }
 a.btn#cta:hover {
   border-radius: 30% 70% 20% 80%/30% 50% 50% 70%;
@@ -848,10 +856,15 @@ img {
 
 #logo {
   height: auto;
-  width: 120px;
+  width: 75px;
   margin: 0;
   position: fixed;
   z-index: 12;
+}
+@media (min-width: 996px) {
+  #logo {
+    width: 110px;
+  }
 }
 
 .text-main-color {
@@ -860,6 +873,15 @@ img {
 
 .m-0 {
   margin: 0;
+}
+
+.mt-x {
+  margin-top: 6rem;
+}
+@media (min-width: 996px) {
+  .mt-x {
+    margin-top: 9rem;
+  }
 }
 
 .text-bigger {
@@ -875,6 +897,7 @@ img {
   top: 0;
   left: 0;
   z-index: 1;
+  background-image: url("/background.0063873b.png") center center fixed cover;
 }
 
 .background-container {
@@ -884,7 +907,7 @@ img {
   width: 100%;
   height: 1200%;
   overflow: hidden;
-  animation: moving-background 950s linear infinite;
+  animation: moving-background 60s linear infinite;
 }
 
 .background {
@@ -902,10 +925,10 @@ img {
 
 @keyframes moving-background {
   from {
-    transform: translate3d(0px, -50%, 0px);
+    transform: translate3d(0px, -5%, 0px);
   }
   to {
-    transform: translate3d(0px, 50%, 0px);
+    transform: translate3d(0px, 5%, 0px);
   }
 }
 .container {
@@ -925,7 +948,7 @@ img {
   flex-flow: column;
   padding: 0 2rem;
   max-width: 1440px;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
 }
 .block.block-full-width {
@@ -939,7 +962,7 @@ img {
   align-content: stretch;
 }
 .block.block-banner {
-  min-height: 60px;
+  min-height: 90px;
 }
 
 .block.block-banner div {
@@ -947,15 +970,25 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 1440px;
   padding: 0 2rem;
 }
+@media (min-width: 996px) {
+  .block.block-banner div {
+    justify-content: space-between;
+  }
+}
 
 .block.block-banner div h6 {
-  margin: 0;
+  margin: 1rem auto;
+}
+@media (min-width: 996px) {
+  .block.block-banner div h6 {
+    margin: 0;
+  }
 }
 
 .block.block-container .sub-block {
@@ -1002,6 +1035,7 @@ img {
 }
 .disclaimer {
   height: 120px;
+  padding: 0 1rem;
   text-align: center;
   color: #ad8fa7;
 }
@@ -1018,13 +1052,13 @@ img {
 #intro main {
   align-self: start;
   z-index: 4;
-  margin: 5rem 0;
+  margin: 2.5rem 0;
   max-width: 996px;
+  padding-top: 6rem;
 }
 @media (min-width: 996px) {
   #intro main {
     margin: auto 0;
-    padding-top: 6rem;
   }
 }
 
@@ -1039,15 +1073,11 @@ img {
   color: #e75152;
   margin: 12rem 0;
   text-align: center;
-}
-@media (max-width: 996px) {
-  #contacts {
-    height: 9rem;
-  }
+  height: 12rem;
 }
 @media (min-width: 996px) {
   #contacts {
-    height: 16rem;
+    height: 18rem;
   }
 }
 
@@ -1062,6 +1092,7 @@ img {
 }
 @media (max-width: 996px) {
   #sidebar-contacts {
+    margin-top: 2rem;
     width: 100%;
   }
 }
