@@ -5,7 +5,8 @@
    pitchfork.com for the cool moving background idea
 
 
-/* SITE */
-    Standards: HTML5, CSS3, JS
+/* SITE */                  
+    Standards: HTML5, CSS3, JS                
     Components: sass, parcel, photoswipe
     Software: VS Code
+	
